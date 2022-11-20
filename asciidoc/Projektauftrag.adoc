@@ -36,7 +36,21 @@ Die App soll Benutzer- und anfängerfreundlich sein.
 Anwendung, auf der man Schnapsen lernen und spielen kann.
 
 === Use-Case-Diagramm
-image::Use-Case-Diagramm.jpg[]
+[plantuml,demo-cld,png]
+----
+@startuml
+left to right direction
+actor spieler
+rectangle Kartenspiel {
+    usecase "lernen von Doppeldeutschen Karten" as karten
+    usecase "lernen vom Spiel "Schnapsen"" as lernen
+    usecase "Spielen mit anderen Spielern" as spielen
+}
+spieler --> karten
+spieler --> lernen
+spieler --> spielen
+@enduml
+----
 
 == Projektphasen / Meilensteine
 |===
