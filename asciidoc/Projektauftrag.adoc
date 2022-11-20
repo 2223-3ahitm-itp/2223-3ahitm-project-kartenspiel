@@ -35,6 +35,9 @@ Die App soll Benutzer- und anfängerfreundlich sein.
 
 Anwendung, auf der man Schnapsen lernen und spielen kann.
 
+=== Use-Case-Diagramm
+image::Use-Case-Diagramm.jpg[]
+
 == Projektphasen / Meilensteine
 |===
 |*Phase* |*Meilenstein/Ergebnis* |*Solltermin*
@@ -60,6 +63,9 @@ unbekannt
 |===
 |*Infrastruktur* |*Menge* |*Euro & Einheit* |*Betrag*
 |Server |1 |4,99 €/Monat |4,99 €
-|*Personal* | | |
-|Projektleiter |1 | |
-|Programmierer |4 | |
+|===
+|===
+|*Personal* |*Menge*
+|Projektleiter |1
+|Programmierer |4
+|===
