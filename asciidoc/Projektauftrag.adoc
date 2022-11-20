@@ -1,0 +1,8 @@
+= Projektauftag 22/23 / 3AHITM / ITP
+Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
+1.0.0, {docdate}: ITP
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+:experimental:
