@@ -6,3 +6,60 @@ Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
 :sectnums:    // Nummerierung der Überschriften / section numbering
 :toc: left
 :experimental:
+
+== Projektbezeichnung
+App zum Schnapsen lernen.
+
+== Projektauftraggeber
+Thomas W. Stütz
+
+== Projekthintergrund
+Personen, die Interesse am Schnapsen haben, sollen auf der App Ihre Fähigkeiten verbessern.
+
+== Projektendergebnis
+Spieler können online Schnapsen lernen und spielen.
+
+Viele Spieler gleichzeitige online.
+
+== Projektziele
+Eine App, auf der man Schnapsen lernen und spielen kann.
+
+== Projektbeschreibung
+Es soll eine App programmieren werden, wo man 2P-Schnaspen, 3P-Schnapsen und 4P-Schnapsen.
+Es sollen alle Spielmodi vorhanden sein.
+
+Man soll online und gegen den Computer spielen können. Damit man aber überhaupt spielen kann,
+muss man einen Account anlegen. Es wird auch hin und wieder eine Werbung geschaltet.
+
+Die App soll Benutzer- und anfängerfreundlich sein.
+
+Anwendung, auf der man Schnapsen lernen und spielen kann.
+
+== Projektphasen / Meilensteine
+|===
+|*Phase* |*Meilenstein/Ergebnis* |*Solltermin*
+|*Projektinitiierung* |Zusage zur Durchführung des Projektes |21.11.2022
+|*Projektplanung* |Projektplan |unbekannt
+|*Projektdurchführung* |Wireframe der App,
+Kennzeichnung der Grundstruktur |unbekannt
+| |Mockup der App,
+Veranschaulichung des Designs|unbekannt
+| |Prototyp der App,
+funktionierende Version des Projektes|unbekannt
+| |Fertige App |unbekannt
+|*Projektevaluierung* |Projektbericht |unbekannt
+|===
+
+== Projektstart
+21.11.2022
+
+== Projektende
+unbekannt
+
+== Projektressourcen
+|===
+|*Infrastruktur* |*Menge* |*Euro & Einheit* |*Betrag*
+|Server |1 |4,99 €/Monat |4,99 €
+|*Personal* | | |
+|Projektleiter |1 | |
+|Programmierer |4 | |
