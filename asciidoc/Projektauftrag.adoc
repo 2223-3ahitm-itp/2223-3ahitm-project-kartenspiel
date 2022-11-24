@@ -10,22 +10,19 @@ Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
 == Projektbezeichnung
 App zum Schnapsen lernen.
 
-== Projektauftraggeber
-Thomas W. Stütz
-
 == Projekthintergrund
-Personen, die Interesse am Schnapsen haben, sollen auf der App Ihre Fähigkeiten verbessern.
-
-== Projektendergebnis
-Spieler können online Schnapsen lernen und spielen.
-
-Viele Spieler gleichzeitige online.
+Eine online Spiel, welches einem ermöglicht Schnapsen zu spielen und zu lernen.
 
 == Projektziele
-Eine App, auf der man Schnapsen lernen und spielen kann.
+* Schnapsen beizubringen
+* Ermöglichen online zu schnapsen und zu auszuprobieren
+* Man soll Spaß am Spiel haben
 
 == Projektbeschreibung
-Es soll eine App programmieren werden, wo man 2P-Schnaspen, 3P-Schnapsen und 4P-Schnapsen.
+
+
+
+Es soll eine App programmiert werden, wo man 2P-Schnaspen, 3P-Schnapsen und 4P-Schnapsen.
 Es sollen alle Spielmodi vorhanden sein.
 
 Man soll online und gegen den Computer spielen können. Damit man aber überhaupt spielen kann,
