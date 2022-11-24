@@ -11,7 +11,7 @@ Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
 Schnapsen App
 
 == Projekthintergrund
-Eine online Spiel, welches einem ermöglicht Schnapsen zu spielen und zu lernen.
+Ein online Spiel, welches einem ermöglicht Schnapsen zu spielen und zu lernen.
 
 == Projektziele
 * Schnapsen beizubringen
