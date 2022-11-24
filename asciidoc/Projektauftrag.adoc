@@ -8,7 +8,7 @@ Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
 :experimental:
 
 == Projektbezeichnung
-App zum Schnapsen lernen.
+Schnapsen App
 
 == Projekthintergrund
 Eine online Spiel, welches einem ermöglicht Schnapsen zu spielen und zu lernen.
@@ -19,33 +19,29 @@ Eine online Spiel, welches einem ermöglicht Schnapsen zu spielen und zu lernen.
 * Man soll Spaß am Spiel haben
 
 == Projektbeschreibung
-
-
-
-Es soll eine App programmiert werden, wo man 2P-Schnaspen, 3P-Schnapsen und 4P-Schnapsen.
+Eine Anwendung, in der man 2 P(ersonen)-Schnaspen, 3 P-Schnapsen und 4 P-Schnapsen.
 Es sollen alle Spielmodi vorhanden sein.
 
-Man soll online und gegen den Computer spielen können. Damit man aber überhaupt spielen kann,
-muss man einen Account anlegen. Es wird auch hin und wieder eine Werbung geschaltet.
+Man soll online gegen andere Spieler spielen können. Am Anfang soll man ein Tutorial mit den Karten und dem Spielprinzip sehen. +
+Damit man aber überhaupt spielen kann, muss man einen Account anlegen. +
+Es wird auch hin und wieder eine Werbung geschaltet.
 
-Die App soll Benutzer- und anfängerfreundlich sein.
-
-Anwendung, auf der man Schnapsen lernen und spielen kann.
+Die Anwendung soll Benutzer- und anfängerfreundlich sein.
 
 === Use-Case-Diagramm
-[plantuml,demo-cld,png]
+[plantuml,usecase-diagram,png]
 ----
 @startuml
 left to right direction
-actor spieler
+actor Spieler
 rectangle Kartenspiel {
     usecase "lernen von Doppeldeutschen Karten" as karten
     usecase "lernen vom Spiel "Schnapsen"" as lernen
-    usecase "Spielen mit anderen Spielern" as spielen
+    usecase "spielen mit anderen Spielern" as spielen
 }
-spieler --> karten
-spieler --> lernen
-spieler --> spielen
+Spieler -- karten
+Spieler -- lernen
+Spieler -- spielen
 @enduml
 ----
 
@@ -53,28 +49,29 @@ spieler --> spielen
 |===
 |*Phase* |*Meilenstein/Ergebnis* |*Solltermin*
 |*Projektinitiierung* |Zusage zur Durchführung des Projektes |21.11.2022
-|*Projektplanung* |Projektplan |unbekannt
-|*Projektdurchführung* |Wireframe der App,
-Kennzeichnung der Grundstruktur |unbekannt
+|*Projektplanung* | |
+|Projektdurchführung |Wireframe der App,
+Kennzeichnung der Grundstruktur |02.12.2022
 | |Mockup der App,
-Veranschaulichung des Designs|unbekannt
+Veranschaulichung des Designs|16.12.2022
 | |Prototyp der App,
-funktionierende Version des Projektes|unbekannt
-| |Fertige App |unbekannt
-|*Projektevaluierung* |Projektbericht |unbekannt
+funktionierende Version des Projektes|19.05.2023
+| |Fertige App |16.06.2023
+|*Projektevaluierung* |Projektbericht |23.06.2023
 |===
 
 == Projektstart
 21.11.2022
 
 == Projektende
-unbekannt
+30.06.2023
 
 == Projektressourcen
 |===
 |*Infrastruktur* |*Menge* |*Euro & Einheit* |*Betrag*
-|Server |1 |4,99 €/Monat |4,99 €
+|Server |1 |4,99 €/Monat |24,59 €|
 |===
+(eventuell auslagern auf LeoCloud)
 |===
 |*Personal* |*Menge*
 |Projektleiter |1
