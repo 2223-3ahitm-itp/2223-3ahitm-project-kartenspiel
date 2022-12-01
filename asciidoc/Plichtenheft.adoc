@@ -1,0 +1,27 @@
+= Plichtenheft
+Projektmitglied Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
+1.0.0, {docdate}
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+:experimental:
+
+== Aufgabenbeschreibung
+Eine App zum Schnapsen ist zu erstellen mit folgenden Funktionalitäten:
+
+* Lernen von den Regeln und den Spielabläufen.
+* Man muss einen Account anlegen.
+* Spieler soll Online gegen andere Spieler spielen können und vielleicht Punkte sammeln können.
+
+== Nutzen
+
+* Die Spieler können sich verbessern
+* Personen, die dieses Spiel neu entdecken, können es lernen und darin ein neues Hobby finden.
+
+== Konsequenzen
+Wenn Personen dieses Spiel nicht lernen, dann werden nie neue Spieler entstehen, die andere Spieler herausfordern können.
+Und die Spieler, die dieses Spiel schon können, verlieren irgendwann den Spielspaß, wenn sie immer gegen dieselben spielen müssen.
+
+== Pers. und finanz. Rahmenbedingungen
+Ein Schülerteam aus 4 Personen arbeitet in diesem Schuljahr daran.
