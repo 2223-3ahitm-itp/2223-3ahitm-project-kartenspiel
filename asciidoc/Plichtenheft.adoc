@@ -11,8 +11,8 @@ Projektmitglieder Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jako
 Wir sind ein 4 Mann (Schüler) Team. Wir befinden uns in Leonding, das ist im Zentralraum von Oberösterreich.
 
 == Istzustand
-Zurzeit gibt es viel zu wenig Personen, die Schnapsen können und die, die es
-können sind meistens nicht sehr gut, weil sie es zu oft spielen.
+Zurzeit gibt es viel zu wenige Personen die Schnapsen verstehen.
+Die, die wissen wie das Spiel funktioniert, können sich aufgrund von mangelnder Spieler nicht großartig verbessern.
 
 == Problemstellung
 
