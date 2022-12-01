@@ -20,6 +20,10 @@ Die, die wissen wie das Spiel funktioniert, können sich aufgrund von mangelnder
 * Spieler können sich nicht großartig verbessern.
 * Spieler können sich nicht messen.
 
-== Ergebnis
+== Sollzustand
 Eine Anwendung ist zu programmieren, wo jeder die Regeln von 2 P-Schnaspen, 3 P-Schnapsen und 4 P-Schnapsen
 lernen kann. Die Leute, die es schon beherrschen, können Online gegen andere Spieler spielen und sich mit ihnen messen.
+
+== Ziel
+Leute können leichter Schnapsen lernen und sich verbessern, aber vor allem sollen
+sie Spaß am spielen haben.
