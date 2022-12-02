@@ -8,11 +8,11 @@ Projektmitglieder Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jako
 :experimental:
 
 == Ausgangssituation
-Wir sind ein 4 Mann (Schüler) Team. Wir befinden uns in Leonding, das ist im Zentralraum von Oberösterreich.
+Wir sind ein 4 Schüler Team. Wir arbeiten in der HTBLA Leonding im Fach ITP an einem Projekt.
 
 == Istzustand
 Zurzeit gibt es viel zu wenige Personen die Schnapsen verstehen.
-Die, die wissen wie das Spiel funktioniert, können sich aufgrund von mangelnder Spieler nicht großartig verbessern.
+Die, die wissen wie das Spiel funktioniert, können sich aufgrund von mangelnden Spielen nicht großartig verbessern.
 
 == Problemstellung
 
@@ -21,7 +21,7 @@ Die, die wissen wie das Spiel funktioniert, können sich aufgrund von mangelnder
 * Spieler können sich nicht messen.
 
 == Sollzustand
-Eine Anwendung ist zu programmieren, wo jeder die Regeln von 2 P-Schnaspen, 3 P-Schnapsen und 4 P-Schnapsen
+Eine Anwendung ist zu programmieren, wo jeder die Regeln von 2 P(ersonen)-Schnaspen, 3 P-Schnapsen und 4 P-Schnapsen
 lernen kann. Die Leute, die es schon beherrschen, können Online gegen andere Spieler spielen und sich mit ihnen messen.
 
 == Ziel
