@@ -1,4 +1,4 @@
-= Plichtenheft
+= Pflichtenheft
 Projektmitglieder Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
 1.0.0, {docdate}
 :sourcedir: ../src/main/java
