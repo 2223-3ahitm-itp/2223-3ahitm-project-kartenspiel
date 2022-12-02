@@ -1,1 +1,3 @@
 = Kartenspiel
+== Beschreibung
+Anwendung um Doppeldeutsche Karten und Schnapsen zulernen und online mit anderen zu spielen und sich messen.
