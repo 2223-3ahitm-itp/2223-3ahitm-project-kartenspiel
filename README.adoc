@@ -1,5 +1,25 @@
-= Kartenspiel
+= ReadMe
+Projektmitglieder Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
+1.0.0, {docdate}
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+:experimental:
 
-== Beschreibung
+== Projekt Kartenspielen
+== Einführung
+Das ITP Projekt kartenspielen handelt von einer Anwendung, auf der man sowohl
+Schnapsen lernen kann, als auch online gegen andere Spieler spielen kann.
+Genaueres findet man unter folgendem Link: link:asciidoc/Projektauftrag.adoc[Projektauftrag]
 
-Anwendung um Doppeldeutsche Karten und Schnapsen zulernen und online mit anderen zu spielen und sich messen.
+Das Projekt wird entwickelt von:
+
+* Wagner Moritz (Projektleiter)
+* Slabschi Maximilian
+* Schablinger Mathias
+* Michel Jakob
+
+== Projektaufbau
+* link:asciidoc/[Asciidoc Files]
+* link:.github/[Github Files]
