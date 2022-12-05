@@ -12,7 +12,7 @@ Wir sind ein 4 Schüler Team. Wir arbeiten in der HTBLA Leonding im Fach ITP an 
 
 == Istzustand
 Zurzeit gibt es viel zu wenige Personen die Schnapsen verstehen.
-Die, die wissen wie das Spiel funktioniert, können sich aufgrund von mangelnden Spielen nicht großartig verbessern.
+Die, die wissen wie das Spiel funktioniert, können sich aufgrund von mangelnden Spielerzahlen nicht großartig verbessern.
 
 == Problemstellung
 
@@ -25,5 +25,5 @@ Eine Anwendung ist zu programmieren, wo jeder die Regeln von 2 P(ersonen)-Schnas
 lernen kann. Die Leute, die es schon beherrschen, können Online gegen andere Spieler spielen und sich mit ihnen messen.
 
 == Ziel
-Leute können leichter Schnapsen lernen und sich verbessern, aber vor allem sollen
-sie Spaß am spielen haben.
+Mehr Spieler finden Spaß am Schnapsen.
+Leute können leichter Schnapsen lernen und sich verbessern.
