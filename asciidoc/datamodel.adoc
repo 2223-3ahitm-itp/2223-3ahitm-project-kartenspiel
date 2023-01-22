@@ -1,0 +1,40 @@
+[plantuml,usecase-diagram,png]
+----
+@startuml
+class User {
+-username: String
+-password: String
+-email: String
+-gamesPlayed: int
+-wins: int
+-looses: int
+}
+class Player {
+-score: Integer
+-hand: Card[]
+}
+
+class Card {
+-cardName: String
+-cardType: String
+-value: int
+}
+enum CardTypes {
+-EICHEL
+-PIK
+-HERZ
+-SCHELLE
+}
+class Game {
+-deck: Card[]
+-type: int
+-turn: Player
+-winner: Player
+}
+User -- Player
+Player --  Card
+Game  --  Player
+Game -- Card
+Card -- CardTypes
+@enduml
+----
