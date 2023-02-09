@@ -52,9 +52,9 @@ Spieler -- spielen
 |*Projektinitiierung* |Zusage zur Durchführung des Projektes |21.11.2022
 |*Projektplanung* | |
 |Projektdurchführung |Wireframe der App,
-Kennzeichnung der Grundstruktur |02.12.2022
+Kennzeichnung der Grundstruktur |09.02.2023
 | |Mockup der App,
-Veranschaulichung des Designs|16.12.2022
+Veranschaulichung des Designs|17.02.2023
 | |Prototyp der App,
 funktionierende Version des Projektes|19.05.2023
 | |Fertige App |16.06.2023
