@@ -2,39 +2,37 @@
 ----
 @startuml
 class User {
--username: String
--password: String
--email: String
--gamesPlayed: int
--wins: int
--looses: int
+username: String
+password: String
+email: String
+gamesPlayed: Integer
+wins: Integer
+looses: Integer
 }
-class Player {
--score: Integer
--hand: Card[]
+
+class Lecture {
+    name: String
+    progress: Integer
+    content: String
 }
+
+note "Tutorial consists of lectures" as note1
 
 class Card {
 -cardName: String
 -cardType: String
--value: int
+-value: Integer
 }
+
 enum CardTypes {
--EICHEL
--PIK
--HERZ
--SCHELLE
+EICHEL
+PIK
+HERZ
+SCHELLE
 }
-class Game {
--deck: Card[]
--type: int
--turn: Player
--winner: Player
-}
-User -- Player
-Player --  Card
-Game  --  Player
-Game -- Card
-Card -- CardTypes
+
+Card "5"--"1" CardTypes
+User "*"--"*" Lecture
+note1 .. Lecture
 @enduml
 ----
