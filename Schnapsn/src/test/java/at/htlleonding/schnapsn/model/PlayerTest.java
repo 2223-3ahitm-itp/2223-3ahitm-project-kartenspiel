@@ -60,9 +60,6 @@ class PlayerTest {
     @Test
     void testAddPlayerIntoDatabase() {
         Player player = new Player("JaneSmith", "93n4j32n59", "smith.jane@gmail.com");
-        String username = "JaneSmith";
-        String password = "93n4j32n59";
-        String email = "smith.jane@gmail.com";
         String statement = "INSERT INTO PLAYER(USERNAME, PASSWORD, EMAIL, GAMES_PLAYED, WINS, LOOSES) VALUES (?, ?, ?, ?, ?, ?)";
 
         // prepare statement
@@ -77,6 +74,30 @@ class PlayerTest {
             // execute statement
             int affectedRows = preparedStatement.executeUpdate();
             assertThat(affectedRows).isEqualTo(1);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Test
+    void testGetDataFromDatabase() {
+        Player player = new Player("JaneSmith", "93n4j32n59", "smith.jane@gmail.com");
+        String statement = "SELECT * FROM PLAYER WHERE USERNAME = ?";
+
+        // prepare statement
+        try (PreparedStatement preparedStatement = connection.prepareStatement(statement)) {
+            preparedStatement.setString(1, player.getUsername());
+
+            // execute statement
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // test database output
+            assertThat(resultSet.getString(1)).isEqualTo(player.getUsername());
+            assertThat(resultSet.getString(2)).isEqualTo(player.getPassword());
+            assertThat(resultSet.getString(3)).isEqualTo(player.getEmail());
+            assertThat(resultSet.getInt(4)).isEqualTo(player.getGames_played());
+            assertThat(resultSet.getInt(5)).isEqualTo(player.getWins());
+            assertThat(resultSet.getInt(6)).isEqualTo(player.getLosses());
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
