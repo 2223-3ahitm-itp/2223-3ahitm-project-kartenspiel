@@ -92,12 +92,19 @@ class PlayerTest {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             // test database output
-            assertThat(resultSet.getString(1)).isEqualTo(player.getUsername());
-            assertThat(resultSet.getString(2)).isEqualTo(player.getPassword());
-            assertThat(resultSet.getString(3)).isEqualTo(player.getEmail());
-            assertThat(resultSet.getInt(4)).isEqualTo(player.getGames_played());
-            assertThat(resultSet.getInt(5)).isEqualTo(player.getWins());
-            assertThat(resultSet.getInt(6)).isEqualTo(player.getLosses());
+            String username = resultSet.getString(1);
+            String password = resultSet.getString(2);
+            String email = resultSet.getString(3);
+            int games_played = resultSet.getInt(4);
+            int wins = resultSet.getInt(5);
+            int losses = resultSet.getInt(6);
+
+            assertThat(player.getUsername()).isEqualTo(username);
+            assertThat(player.getPassword()).isEqualTo(password);
+            assertThat(player.getEmail()).isEqualTo(email);
+            assertThat(player.getGames_played()).isEqualTo(games_played);
+            assertThat(player.getWins()).isEqualTo(wins);
+            assertThat(player.getLosses()).isEqualTo(losses);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -138,12 +145,19 @@ class PlayerTest {
             ResultSet resultSet = preparedStatement.executeQuery();
 
             // test database output
-            assertThat(resultSet.getString(1)).isEqualTo(updatedPlayer.getUsername());
-            assertThat(resultSet.getString(2)).isEqualTo(updatedPlayer.getPassword());
-            assertThat(resultSet.getString(3)).isEqualTo(updatedPlayer.getEmail());
-            assertThat(resultSet.getInt(4)).isEqualTo(updatedPlayer.getGames_played());
-            assertThat(resultSet.getInt(5)).isEqualTo(updatedPlayer.getWins());
-            assertThat(resultSet.getInt(6)).isEqualTo(updatedPlayer.getLosses());
+            String username = resultSet.getString(1);
+            String password = resultSet.getString(2);
+            String email = resultSet.getString(3);
+            int games_played = resultSet.getInt(4);
+            int wins = resultSet.getInt(5);
+            int losses = resultSet.getInt(6);
+
+            assertThat(updatedPlayer.getUsername()).isEqualTo(username);
+            assertThat(updatedPlayer.getPassword()).isEqualTo(password);
+            assertThat(updatedPlayer.getEmail()).isEqualTo(email);
+            assertThat(updatedPlayer.getGames_played()).isEqualTo(games_played);
+            assertThat(updatedPlayer.getWins()).isEqualTo(wins);
+            assertThat(updatedPlayer.getLosses()).isEqualTo(losses);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -151,11 +165,11 @@ class PlayerTest {
 
     @Test
     void testRemoveFromDatabase() {
-        Player player = new Player("JaneSmith", "93n4j32n59", "smith.jane@gmail.com");
+        Player updatedPlayer = new Player("SmithJane", "lkjdsf90", "j.smith@gmail.com");
         String statement = "DELETE FROM PLAYER WHERE USERNAME = ?";
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(statement)) {
-            preparedStatement.setString(1, player.getUsername());
+            preparedStatement.setString(1, updatedPlayer.getUsername());
 
             int affectedRows = preparedStatement.executeUpdate();
         } catch (SQLException e) {
