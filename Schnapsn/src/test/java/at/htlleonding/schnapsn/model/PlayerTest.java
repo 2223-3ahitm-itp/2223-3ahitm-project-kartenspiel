@@ -3,13 +3,22 @@ package at.htlleonding.schnapsn.model;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 import static org.assertj.core.api.Assertions.*;
 
 class PlayerTest {
+    private static Connection connection;
+    @BeforeAll
+    public static void setup() throws SQLException {
+        try {
+            Connection connection = DriverManager.getConnection("jdbc:derby://localhost:1527/derbydb-1");
+            System.out.println("Connection Established");
+        } catch (SQLException e) {
+            System.err.println("Connection couldn't be established: " + e.getMessage());
+        }
+    }
+
     @Test
     void testGetterAndSetter() {
         Player player = new Player("JonnoDoe", "1jkdfe23", "john.doe@gmail.com");
@@ -46,5 +55,30 @@ class PlayerTest {
         assertThat(player.getWins()).isEqualTo(2);
         assertThat(player.getGames_played()).isEqualTo(3);
         assertThat(player.getLosses()).isEqualTo(1);
+    }
+
+    @Test
+    void testAddPlayerIntoDatabase() {
+        Player player = new Player("JaneSmith", "93n4j32n59", "smith.jane@gmail.com");
+        String username = "JaneSmith";
+        String password = "93n4j32n59";
+        String email = "smith.jane@gmail.com";
+        String statement = "INSERT INTO PLAYER(USERNAME, PASSWORD, EMAIL, GAMES_PLAYED, WINS, LOOSES) VALUES (?, ?, ?, ?, ?, ?)";
+
+        // prepare statement
+        try (PreparedStatement preparedStatement = connection.prepareStatement(statement, Statement.RETURN_GENERATED_KEYS)) {
+            preparedStatement.setString(1, player.getUsername());
+            preparedStatement.setString(2, player.getPassword());
+            preparedStatement.setString(3, player.getEmail());
+            preparedStatement.setInt(4, player.getGames_played());
+            preparedStatement.setInt(5, player.getWins());
+            preparedStatement.setInt(6, player.getLosses());
+
+            // execute statement
+            int affectedRows = preparedStatement.executeUpdate();
+            assertThat(affectedRows).isEqualTo(1);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
