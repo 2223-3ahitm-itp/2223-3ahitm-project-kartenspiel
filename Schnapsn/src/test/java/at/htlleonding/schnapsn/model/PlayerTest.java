@@ -102,4 +102,18 @@ class PlayerTest {
             throw new RuntimeException(e);
         }
     }
+
+    @Test
+    void testRemoveFromDatabase() {
+        Player player = new Player("JaneSmith", "93n4j32n59", "smith.jane@gmail.com");
+        String statement = "DELETE FROM PLAYER WHERE USERNAME = ?";
+
+        try (PreparedStatement preparedStatement = connection.prepareStatement(statement)) {
+            preparedStatement.setString(1, player.getUsername());
+
+            int affectedRows = preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
