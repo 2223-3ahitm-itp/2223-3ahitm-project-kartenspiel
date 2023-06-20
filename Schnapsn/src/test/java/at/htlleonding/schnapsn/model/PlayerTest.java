@@ -104,6 +104,52 @@ class PlayerTest {
     }
 
     @Test
+    void testUpdatePlayerInDatabase() {
+        Player player = new Player("JaneSmith", "93n4j32n59", "smith.jane@gmail.com");
+        Player updatedPlayer = new Player("SmithJane", "lkjdsf90", "j.smith@gmail.com");
+        String statement = "UPDATE PLAYER SET USERNAME = ?, PASSWORD = ?, EMAIL = ?, GAMES_PLAYED = ?, WINS = ?, LOOSES = ? WHERE USERNAME = ?";
+
+        // prepare statement
+        try (PreparedStatement preparedStatement = connection.prepareStatement(statement)) {
+            preparedStatement.setString(1, updatedPlayer.getUsername());
+            preparedStatement.setString(2, updatedPlayer.getPassword());
+            preparedStatement.setString(3, updatedPlayer.getEmail());
+            preparedStatement.setInt(4, updatedPlayer.getGames_played());
+            preparedStatement.setInt(5, updatedPlayer.getWins());
+            preparedStatement.setInt(6, updatedPlayer.getLosses());
+            preparedStatement.setString(7, player.getUsername());
+
+            int affectedRows = preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Test
+    void testGetUpdatedDataFromDatabase() {
+        Player updatedPlayer = new Player("SmithJane", "lkjdsf90", "j.smith@gmail.com");
+        String statement = "SELECT * FROM PLAYER WHERE USERNAME = ?";
+
+        // prepare statement
+        try (PreparedStatement preparedStatement = connection.prepareStatement(statement)) {
+            preparedStatement.setString(1, updatedPlayer.getUsername());
+
+            // execute statement
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            // test database output
+            assertThat(resultSet.getString(1)).isEqualTo(updatedPlayer.getUsername());
+            assertThat(resultSet.getString(2)).isEqualTo(updatedPlayer.getPassword());
+            assertThat(resultSet.getString(3)).isEqualTo(updatedPlayer.getEmail());
+            assertThat(resultSet.getInt(4)).isEqualTo(updatedPlayer.getGames_played());
+            assertThat(resultSet.getInt(5)).isEqualTo(updatedPlayer.getWins());
+            assertThat(resultSet.getInt(6)).isEqualTo(updatedPlayer.getLosses());
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Test
     void testRemoveFromDatabase() {
         Player player = new Player("JaneSmith", "93n4j32n59", "smith.jane@gmail.com");
         String statement = "DELETE FROM PLAYER WHERE USERNAME = ?";
