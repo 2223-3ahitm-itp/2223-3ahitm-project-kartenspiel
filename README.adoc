@@ -26,14 +26,15 @@ Das Projekt wird entwickelt von:
 
 == Projektausführung
 * Um das Projekt Kartenspielen zum laufen zu bringen, sollten Sie folgende schritte durchführen:
-* Als Erstes gilt es das `derbydb-create.sh` script auszuführen.
+* Als Erstes wechseln Sie in den Ordner Schapsn.
+* Danach gilt es das `derbydb-create.sh` script auszuführen.
 
 NOTE: Mit diesem script wird die datenbank erstellt
 
-* Um die Datenbank nun zu starten, führen Sie bitte das `derbydb-start.sh` script aus.
+* Um die Datenbank nun zu starten, führen Sie das `derbydb-start.sh` script aus.
 * Um nun eine Verbindung mit der Datenbank herzustellen, navigieren sie rechts auf Database.
 * Kopieren Sie den Inhalt aus dem `datasource.txt` und drücken sie anschließend auf das `+` bei Database.
-* Im Dropdown sollten sie `Import from Clipboard` finden und dieses anclicken.
+* Im Dropdown sollten sie `Import from Clipboard` finden und dieses anklicken.
 * Nun sollten sie nur noch bei Passwort ...
 ====
 app
