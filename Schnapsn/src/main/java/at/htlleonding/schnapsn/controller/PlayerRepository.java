@@ -20,7 +20,7 @@ public class PlayerRepository implements Persistent<Player> {
     public void update(Player player) {
         // prepare statement
         try (Connection connection = dataSource.getConnection()) {
-            String statement = "UPDATE PLAYER SET USERNAME = ?, PASSWORD = ?, EMAIL = ?, GAMES_PLAYED = ?, WINS = ?, LOOSES = ? WHERE PLAYERID = ?";
+            String statement = "UPDATE PLAYER SET USERNAME = ?, PASSWORD = ?, EMAIL = ?, GAMES_PLAYED = ?, WINS = ?, LOSSES = ? WHERE PLAYERID = ?";
 
             PreparedStatement preparedStatement = connection.prepareStatement(statement);
             preparedStatement.setString(1, player.getUsername());
@@ -43,7 +43,7 @@ public class PlayerRepository implements Persistent<Player> {
     public void insert(Player player) {
         // prepare statement
         try (Connection connection = dataSource.getConnection()) {
-            String statement = "INSERT INTO PLAYER(USERNAME, PASSWORD, EMAIL, GAMES_PLAYED, WINS, LOOSES) VALUES (?, ?, ?, ?, ?, ?)";
+            String statement = "INSERT INTO PLAYER(USERNAME, PASSWORD, EMAIL, GAMES_PLAYED, WINS, LOSSES) VALUES (?, ?, ?, ?, ?, ?)";
 
             PreparedStatement preparedStatement = connection.prepareStatement(statement, Statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, player.getUsername());

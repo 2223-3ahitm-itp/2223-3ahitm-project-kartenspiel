@@ -6,7 +6,7 @@ create table PLAYER
     email        varchar(50)  not null,
     games_played int,
     wins         int,
-    looses       int
+    losses       int
 );
 create table CARD
 (
