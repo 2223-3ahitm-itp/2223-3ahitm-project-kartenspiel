@@ -1,12 +1,9 @@
 package at.htlleonding.schnapsn.controller;
 
 import at.htlleonding.schnapsn.model.Player;
-import org.apache.ibatis.metadata.Table;
 
 import javax.sql.DataSource;
 import java.sql.*;
-
-import static org.assertj.core.api.Assertions.assertThat;
 
 public class PlayerRepository implements Persistent<Player> {
     private DataSource dataSource = Database.getDataSource();
