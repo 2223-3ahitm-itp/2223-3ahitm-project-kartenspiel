@@ -9,7 +9,4 @@ public interface Persistent<T> {
 
     public void delete(long id);
 
-    public List<T> findAll();
-
-    public T findById(long id);
 }

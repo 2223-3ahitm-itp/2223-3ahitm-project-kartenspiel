@@ -1,6 +1,7 @@
 package at.htlleonding.schnapsn.model;
 
 public class Player {
+    private static int playerId;
     private String username;
     private String password;
     private String email;
@@ -9,12 +10,16 @@ public class Player {
     private Integer losses;
 
     public Player(String username, String password, String email) {
+        playerId++;
         this.username = username;
         this.password = password;
         this.email = email;
         this.games_played = 0;
         this.wins = 0;
         this.losses = 0;
+    }
+    public int getPlayerId() {
+        return playerId;
     }
 
     public String getUsername() {
