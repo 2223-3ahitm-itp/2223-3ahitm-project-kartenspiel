@@ -19,7 +19,7 @@ public class LectureRepository implements Persistent<Lecture> {
 
     public void update(Lecture lecture) {
         try (Connection connection = dataSource.getConnection()) {
-            String sql = "update lecture SET name=?, content=? where lectureId=?";
+            String sql = "update lecture SET name=?, content=? where lectureId=?;";
 
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setString(1, lecture.getName());
@@ -38,7 +38,7 @@ public class LectureRepository implements Persistent<Lecture> {
     @Override
     public void insert(Lecture lecture) {
         try (Connection connection = dataSource.getConnection()) {
-            String sql = "insert into lecture (id, name, content) values  (?, ?);";
+            String sql = "insert into lecture (name, content) values  (?, ?)";
 
             PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, lecture.getName());
@@ -65,7 +65,7 @@ public class LectureRepository implements Persistent<Lecture> {
     @Override
     public void delete(int id) {
         try (Connection connection = dataSource.getConnection()) {
-            String sql = "delete from lecture where lecturId=?";
+            String sql = "delete from lecture where lectureId=?;";
 
             PreparedStatement statement = connection.prepareStatement(sql);
             statement.setLong(1, id);
