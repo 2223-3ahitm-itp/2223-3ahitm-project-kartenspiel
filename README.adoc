@@ -23,3 +23,20 @@ Das Projekt wird entwickelt von:
 == Projektaufbau
 * link:asciidoc/[Asciidoc Files]
 * link:.github/[Github Files]
+
+== Projektausführung
+* Um das Projekt Kartenspielen zum laufen zu bringen, sollten Sie folgende schritte durchführen:
+* Als Erstes gilt es das `derbydb-create.sh` script auszuführen.
+
+NOTE: Mit diesem script wird die datenbank erstellt
+
+* Um die Datenbank nun zu starten, führen Sie bitte das `derbydb-start.sh` script aus.
+* Um nun eine Verbindung mit der Datenbank herzustellen, navigieren sie rechts auf Database.
+* Kopieren Sie den Inhalt aus dem `datasource.txt` und drücken sie anschließend auf das `+` bei Database.
+* Im Dropdown sollten sie `Import from Clipboard` finden und dieses anclicken.
+* Nun sollten sie nur noch bei Passwort ...
+====
+app
+====
+* ... eingeben und dann per click auf `Test connection` sollte ein Popup mit Succeed auftauchen.
+* Danach einfach auf `ok` drücken und nun besteht die Verbindung.
