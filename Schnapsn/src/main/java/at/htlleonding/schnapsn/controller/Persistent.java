@@ -7,6 +7,6 @@ public interface Persistent<T> {
 
     public void insert(T entity);
 
-    public void delete(long id);
+    public void delete(int id);
 
 }

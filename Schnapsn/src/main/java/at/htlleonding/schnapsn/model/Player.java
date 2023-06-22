@@ -1,7 +1,7 @@
 package at.htlleonding.schnapsn.model;
 
 public class Player {
-    private static int playerId;
+    private int playerId;
     private String username;
     private String password;
     private String email;
@@ -20,6 +20,9 @@ public class Player {
     }
     public int getPlayerId() {
         return playerId;
+    }
+    public void setPlayerId(int id) {
+        this.playerId = id;
     }
 
     public String getUsername() {
