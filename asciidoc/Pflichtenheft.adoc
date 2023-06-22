@@ -1,0 +1,96 @@
+= Pflichtenheft Kartenspiel
+Projektmitglieder Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
+1.0.0, {docdate}
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+:experimental:
+
+== Ausgangssituation
+Momentan spielen wenige Kinder/Jugendliche das Spiel "Schnapsen" in den Pausen.
+Das Spiel lenkt vom täglichen Schuldasein ab und genehmigt den Augen eine Pause von den Bildschirmen.
+Oftmals besitzen Leute, welche das Spiel spielen wollen, keine Karten und/oder haben keine Ahnung wie die Regeln des Spiels funktionieren.
+Dese Probleme werden durch unsere digitale Variante behoben.
+
+== Istzustand
+Zurzeit gibt es viel zu wenige Personen die Schnapsen verstehen.
+Die, die wissen wie das Spiel funktioniert, können sich aufgrund von mangelnden Spielerzahlen nicht großartig verbessern
+und die, die das Spiel noch nicht verstehen können es nirgends ordentlich erlernen.
+
+== Datenmodell
+
+[plantuml,datamodel,png]
+----
+@startuml
+class User {
+username: String
+password: String
+email: String
+gamesPlayed: Integer
+wins: Integer
+looses: Integer
+}
+
+class Lecture {
+    lectureId: Integer
+    name: String
+    progress: Integer
+    content: String
+}
+
+class Card {
+cardName: String
+cardType: String
+value: Integer
+}
+
+class Tutorial {
+lectureId: Integer
+lecture: Lecture
+}
+
+enum CardTypes {
+EICHEL
+PIK
+HERZ
+SCHELLE
+}
+
+User "*" -- "1" Tutorial
+Card "5"--"1" CardTypes
+Tutorial "1"--"*" Lecture
+@enduml
+----
+
+== Problemstellung
+
+* Spieler können sich nicht weiterentwickeln, weil Sie keine Möglichkeit haben sich zu messen.
+* Personen wollen dieses Spiel lernen wissen aber nicht wo.
+
+== Aufgabenstellung
+Eine Anwendung ist zu programmieren, wo jeder die Regeln von 2 P(ersonen)-Schnaspen, 3 P-Schnapsen und 4 P-Schnapsen
+lernen kann. Die Leute, die es schon beherrschen, können Online gegen andere Spieler spielen und sich mit Ihnen messen.
+
+=== Anwendungsfalldiagramm (Use-Case-Diagramm)
+Um einen besseren Überblick zu bekommen wird in unserem Falle ein Use-Case-Diagram benutzt.
+
+[plantuml,usecase-diagram,png]
+----
+@startuml
+left to right direction
+actor Spieler
+rectangle Kartenspiel {
+    usecase "lernen von Doppeldeutschen Karten" as karten
+    usecase "lernen vom Spiel "Schnapsen"" as lernen
+    usecase "spielen mit anderen Spielern" as spielen
+}
+Spieler -- karten
+Spieler -- lernen
+Spieler -- spielen
+@enduml
+----
+
+== Zielsetzung
+Unser Ziel ist es, dass Personen dieses Spiel lernen möchten die
+Möglichkeit dazu haben und für die, die es schon können, dass Sie sich weiterentwickeln können.

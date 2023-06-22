@@ -1,0 +1,80 @@
+= Projektauftag 22/23 / 3AHITM / ITP
+Wagner Moritz, Maximillian Slabschi, Mathias Schablinger, Jakob Michel
+1.0.0, {docdate}: ITP
+:sourcedir: ../src/main/java
+:icons: font
+:sectnums:    // Nummerierung der Überschriften / section numbering
+:toc: left
+:experimental:
+
+== Projektbezeichnung
+Schnapsen App
+
+== Projekthintergrund
+Neue Spieler können nicht einfach in das Schnapsen einsteigen.
+Unser Spiel soll dabei helfen, Schnapsen unkompliziert zu erlernen.
+
+== Projektziele
+* Schnapsen beizubringen
+* Ermöglichen online zu schnapsen und zu auszuprobieren
+* Man soll Spaß am Spiel haben
+
+== Projektbeschreibung
+Eine Anwendung, in der man 2 P(ersonen)-Schnaspen, 3 P-Schnapsen und 4 P-Schnapsen.
+Es sollen alle Spielmodi vorhanden sein.
+
+Man soll online gegen andere Spieler spielen können. Am Anfang soll man ein Tutorial mit den Karten und dem Spielprinzip sehen. +
+Damit man aber überhaupt spielen kann, muss man einen Account anlegen. +
+Es wird auch hin und wieder eine Werbung geschaltet.
+
+Die Anwendung soll Benutzer- und anfängerfreundlich sein.
+
+=== Use-Case-Diagramm
+[plantuml,usecase-diagram,png]
+----
+@startuml
+left to right direction
+actor Spieler
+rectangle Kartenspiel {
+    usecase "lernen von Doppeldeutschen Karten" as karten
+    usecase "lernen vom Spiel "Schnapsen"" as lernen
+    usecase "spielen mit anderen Spielern" as spielen
+}
+Spieler -- karten
+Spieler -- lernen
+Spieler -- spielen
+@enduml
+----
+
+== Projektphasen / Meilensteine
+|===
+|*Phase* |*Meilenstein/Ergebnis* |*Solltermin*
+|*Projektinitiierung* |Zusage zur Durchführung des Projektes |21.11.2022
+|*Projektplanung* | |
+|Projektdurchführung |Wireframe der App,
+Kennzeichnung der Grundstruktur |09.02.2023
+| |Mockup der App,
+Veranschaulichung des Designs|17.02.2023
+| |Prototyp der App,
+funktionierende Version des Projektes|19.05.2023
+| |Fertige App |16.06.2023
+|*Projektevaluierung* |Projektbericht |23.06.2023
+|===
+
+== Projektstart
+21.11.2022
+
+== Projektende
+30.06.2023
+
+== Projektressourcen
+|===
+|*Infrastruktur* |*Menge* |*Euro & Einheit* |*Betrag*
+|Server |1 |4,99 €/Monat |24,59 €|
+|===
+(eventuell auslagern auf LeoCloud)
+|===
+|*Personal* |*Menge*
+|Projektleiter |1
+|Programmierer |4
+|===
