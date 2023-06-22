@@ -1,6 +1,6 @@
 create table PLAYER
 (
-    playerId    int primary key GENERATED ALWAYS AS IDENTITY,
+    playerId     int primary key GENERATED ALWAYS AS IDENTITY,
     username     varchar(10)  not null,
     password     varchar(200) not null,
     email        varchar(50)  not null,
@@ -16,7 +16,7 @@ create table CARD
 );
 create table LECTURE
 (
-    id      int          not null,
-    name    varchar(100) not null,
-    content varchar(10000)
+    lectureId int primary key GENERATED ALWAYS AS IDENTITY,
+    name      varchar(100) not null,
+    content   varchar(10000)
 );
