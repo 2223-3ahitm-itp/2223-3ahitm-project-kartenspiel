@@ -5,8 +5,17 @@ import at.htlleonding.schnapsn.model.Lecture;
 import javax.sql.DataSource;
 import java.sql.*;
 
-public class LectureRepository {
+public class LectureRepository implements Persistent<Lecture> {
     private DataSource dataSource = Database.getDataSource();
+
+    @Override
+    public void save(Lecture lecture) {
+        if (lecture.getId() == null) {
+            insert(lecture);
+        } else {
+            update(lecture);
+        }
+    }
 
     public void update(Lecture lecture) {
         try (Connection connection = dataSource.getConnection()) {
@@ -26,6 +35,7 @@ public class LectureRepository {
         }
     }
 
+    @Override
     public void insert(Lecture lecture) {
         try (Connection connection = dataSource.getConnection()) {
             String sql = "insert into lecture (id, name, content) values  (?, ?);";
@@ -52,12 +62,13 @@ public class LectureRepository {
 
     }
 
-    public void delete(Lecture lecture) {
+    @Override
+    public void delete(int id) {
         try (Connection connection = dataSource.getConnection()) {
             String sql = "delete from lecture where lecturId=?";
 
             PreparedStatement statement = connection.prepareStatement(sql);
-            statement.setLong(1, lecture.getId());
+            statement.setLong(1, id);
 
             if (statement.executeUpdate() == 0) {
                 throw new SQLException("Update of LECTURE failed, no rows affected");
